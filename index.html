@@ -1,23 +1,28 @@
 <html>
 
 <head>
-    <title>Collapsable Element</title>
+    <title>Collapsible Element</title>
     <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
 </head>
 
 <body>
     <div>
-        <h1>Collapsable Element</h1>
-        <p>This is what my Collapsable Element component looks like!</p>
+        <h1>Collapsible Element</h1>
+        <p>This is what my Collapsible Element component looks like!</p>
 
+
+        <collapsible-element button-text="Section 1" panel-content="Lorem ipsum..."></collapsible-element>
+        <collapsible-element button-color="pink" hover-color="red" button-text="Section 2" panel-content="Hello..."></collapsible-element>
+        <collapsible-element collapsed-emoji="❓" expanded-emoji="👋🏼" button-color="pink" hover-color="red" button-text="Section 2" panel-content="Hello..."></collapsible-element>
     </div>
-
-    <collapsable-element button-text="Section 1" panel-content="Lorem ipsum..."></collapsable-element>
-    <collapsable-element button-text="Section 2" panel-content="Hello..."></collapsable-element>
-
     
-    <script src="./collapsable-element.js"></script>
+    <script src="./collapsible-element.js"></script>
 </body>
 
 </html>
