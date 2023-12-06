@@ -4,9 +4,14 @@
     <title>Collapsible Element</title>
     <style>
         body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        font-size: 20px;
       }
     </style>
 </head>
@@ -14,12 +19,12 @@
 <body>
     <div>
         <h1>Collapsible Element</h1>
-        <p>This is what my Collapsible Element component looks like!</p>
+        <p>This is what my Collapsible Element component looks like! You can customize the colour, emoji, and text!</p>
 
 
-        <collapsible-element button-text="Section 1" panel-content="Lorem ipsum..."></collapsible-element>
-        <collapsible-element button-color="pink" hover-color="red" button-text="Section 2" panel-content="Hello..."></collapsible-element>
-        <collapsible-element collapsed-emoji="❓" expanded-emoji="👋🏼" button-color="pink" hover-color="red" button-text="Section 2" panel-content="Hello..."></collapsible-element>
+        <collapsible-element button-text="Default" panel-content="This is the default colour and emoji"></collapsible-element>
+        <collapsible-element button-color="#79A7D3" hover-color="#6883BC" button-text="Customized colour" panel-content="Here we have customized the colour"></collapsible-element>
+        <collapsible-element collapsed-emoji="❓" expanded-emoji="💛" button-color="#97BC62" hover-color="#2BAE66" button-text="Customized emoji" panel-content="You can use any emojis you like!"></collapsible-element>
     </div>
     
     <script src="./collapsible-element.js"></script>

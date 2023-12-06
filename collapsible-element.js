@@ -3,8 +3,8 @@ class CollapsibleElement extends HTMLElement {
         super();
         this._shadowRoot = this.attachShadow({ mode: 'open' });
         this._text = this.getAttribute('button-text') || 'New Section'; 
-        this._buttonColor = this.getAttribute('button-color') || 'black'; 
-        this._hoverColor = this.getAttribute('hover-color') || 'black';
+        this._buttonColor = this.getAttribute('button-color') || '#FFBE7B'; 
+        this._hoverColor = this.getAttribute('hover-color') || '#FFA351';
 
         this._container = document.createElement('div');
         this._shadowRoot.appendChild(this._container);
@@ -13,6 +13,7 @@ class CollapsibleElement extends HTMLElement {
         this._container.appendChild(this._elementButton);
         this._elementButton.textContent = this._text;
         this._elementButton.style.backgroundColor = this._buttonColor;
+        this._elementButton.style.fontSize = '20px';
         this._elementButton.style.color = '#444';
         this._elementButton.style.cursor = 'pointer';
         this._elementButton.style.padding = '18px';
@@ -60,10 +61,12 @@ class CollapsibleElement extends HTMLElement {
         const panel = document.createElement('div');
         panel.classList.add('panel');
         panel.style.padding = '0 18px';
-        panel.style.backgroundColor = 'white';
+        panel.style.backgroundColor = '#FCF6F5';
         panel.style.maxHeight = '0';
         panel.style.overflow = 'hidden';
         panel.style.transition = 'max-height 0.2s ease-out';
+        panel.style.fontSize = '20px';
+        panel.style.color = '#444';
         this._container.appendChild(panel);
 
         const paragraphContent = this.getAttribute('panel-content') || 'Default Paragraph Content';
